@@ -26,6 +26,7 @@
   .container-fluid {
     width: @siteWidth - @gridGutterWidth - @gridColumnWidth;
     min-width: @siteWidth - @gridGutterWidth - @gridColumnWidth !important;
+    margin: auto;
   }
   .topbar input {
     width: 100px;
@@ -38,7 +39,6 @@
   }
   .container-fluid > .content {
     margin-left: 0;
-    width: @siteWidth - @gridGutterWidth;
   }
 
   // Default columns
@@ -220,6 +220,7 @@
   .container-fluid {
     width: @siteWidth - @gridGutterWidth - (@gridColumnWidth * 2);
     min-width: @siteWidth - @gridGutterWidth - (@gridColumnWidth * 2) !important;
+    margin: auto;
   }
 
   [class*="span"] {
