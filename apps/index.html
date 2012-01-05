@@ -12,15 +12,63 @@
     <![endif]-->
 
     <script src="../js/jquery-1.7.1.min.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/jquery.md5.js"></script>
     <script src="../js/bootstrap-dropdown.js"></script>
     <script src="../js/bootstrap-twipsy.js"></script>
     <script src="../js/bootstrap-scrollspy.js"></script>
+
+    <script type="text/javascript">
+
+      function login(email) {
+        $.cookie('email', email);
+        var gravatar = "http://www.gravatar.com/avatar/" + $.md5(email) + "?s=16px";
+        console.log(gravatar);
+        $.cookie('gravatar', gravatar);
+        $("#signin").parent().hide();
+        $("#signedin").show().find(".email").text(email);
+        $("#signedin").find(".avatar").attr("src", gravatar);
+      }
+
+      function logout() {
+        $.cookie('email', null);
+        $.cookie('gravatar', null);
+        $("#signin").parent().show();
+        $("#signedin").hide();
+      }
+
+      $(document).ready(function () {
+
+        if ($.cookie('email')) {
+          login($.cookie('email'));
+        }
+
+        $("#signin").click(function () {
+          var val = $(this).prev("input[type=text]").val();
+          if (val) {
+            login(val);
+          }
+          return false;
+        });
+
+        $("#logout").click(function () {
+          logout();
+        });
+      });
+    </script>
 
     <!-- Le styles -->
     <link href="../bootstrap.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 60px;
+      }
+      #signedin {
+        display: none;
+      }
+      .avatar {
+        vertical-align: middle;
+        margin: 0 5px;
       }
     </style>
 
@@ -45,13 +93,17 @@
             <input type="text" placeholder="Search"/>
           </form>
           <div class="pull-right">
-            <ul class="nav secondary-nav" data-dropdown="dropdown">
+          <form onsubmit="return false;" class="nav secondary-nav pull-right">
+            <input class="span3" type="text" placeholder="email">
+            <button id="signin" class="btn" type="submit">Sign in</button>
+          </form>
+            <ul id="signedin" class="nav secondary-nav" data-dropdown="dropdown">
               <li class="dropdown">
                 <a class="dropdown-toggle" href="#"><img class="avatar" src=""/><span class="email">clarkbw@example.com</span></a>
                 <ul class="dropdown-menu">
                   <li><a href="#">My Apps</a></li>
                   <li class="divider"></li>
-                  <li><a href="#">Logout</a></li>
+                  <li><a id="logout" href="#">Logout</a></li>
                 </ul>
               </li>
             </ul>
@@ -86,7 +138,7 @@
         <div class="hero-unit">
           <h1>Mozilla Open Market!</h1>
           <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-          <p><a class="btn primary large">Learn more &raquo;</a></p>
+          <p><a  id="more" class="btn primary large">Learn more &raquo;</a></p>
         </div>
         <section id="recommendations">
           <div class="page-header">
