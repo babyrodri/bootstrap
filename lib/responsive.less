@@ -5,62 +5,6 @@
 // LARGE DESKTOP & UP
 // ------------------
 
-@media (min-width: 1210px) {
-
-  // Reset grid variables
-  @gridColumns:       12;
-  @gridColumnWidth:   70px;
-  @gridGutterWidth:   30px;
-  @siteWidth:         1170px;
-
-  // Bring grid mixins to recalculate widths
-  .columns(@columnSpan: 1) {
-    width: (@gridColumnWidth * @columnSpan) + (@gridGutterWidth * (@columnSpan - 1));
-  }
-  .offset(@columnOffset: 1) {
-    margin-left: (@gridColumnWidth * @columnOffset) + (@gridGutterWidth * (@columnOffset - 1)) + @gridGutterWidth;
-  }
-
-  .container-fluid {
-    width: @siteWidth - @gridGutterWidth - (@gridColumnWidth * 2);
-    min-width: @siteWidth - @gridGutterWidth - (@gridColumnWidth * 2) !important;
-    margin: auto;
-  }
-
-  [class*="span"] {
-    margin-left: @gridGutterWidth;
-  }
-
-  // Default columns
-  .span1     { .columns(1); }
-  .span2     { .columns(2); }
-  .span3     { .columns(3); }
-  .span4     { .columns(4); }
-  .span5     { .columns(5); }
-  .span6     { .columns(6); }
-  .span7     { .columns(7); }
-  .span8     { .columns(8); }
-  .span9     { .columns(9); }
-  .span10    { .columns(10); }
-  .span11    { .columns(11); }
-  .span12    { .columns(12); }
-
-  // Offset column options
-  .offset1   { .offset(1); }
-  .offset2   { .offset(2); }
-  .offset3   { .offset(3); }
-  .offset4   { .offset(4); }
-  .offset5   { .offset(5); }
-  .offset6   { .offset(6); }
-  .offset7   { .offset(7); }
-  .offset8   { .offset(8); }
-  .offset9   { .offset(9); }
-  .offset10  { .offset(10); }
-  .offset11  { .offset(11); }
-  .offset12  { .offset(12); }
-
-}
-
 // ANY SCREENS SMALLER THAN DEFAULT DESKTOP
 // ----------------------------------
 
@@ -92,11 +36,12 @@
     min-width: auto !important;
   }
 
+  #signin-form .span3 {
+    display: none;
+  }
+
   .topbar input {
     width: 100px;
-  }
-  .topbar .pretext {
-    display: none;
   }
   .container-fluid > .sidebar {
     display: none;
@@ -139,6 +84,32 @@
 // --------------------------------------------------
 
 @media (max-width: 768px) {
+
+  .topbar .pretext {
+    display: none;
+  }
+
+  // Make the top bar touch-sized
+  @topBarHeight: 44px;
+  body {
+    padding-top: @topBarHeight + 20px;
+  }
+  .topbar {
+    height: @topBarHeight;
+  }
+  .topbar div > ul a, .nav a {
+    font-size: 15px;
+    padding: 12px 15px 14px;
+  }
+  .topbar h3 a, .topbar .brand {
+    padding: 10px 0 14px;
+  }
+  .topbar input {
+    font-size: 15px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+  }
+
   // Remove width from containers
   .container-fluid {
     width: auto;
@@ -220,6 +191,14 @@
 // ---------------------
 
 @media (max-width: 480px) {
+  
+  body {
+    padding-top: 60px;
+  }
+
+  .container-fluid {
+    padding: 0 10px;
+  }
   // Resize modals
   .modal {
     width: auto;
@@ -254,5 +233,18 @@
   .topbar .login {
     width: 24px;
     display: inline-block;
+  }
+
+  // Increase overall font size
+  .btn, p {
+    font-size: 15px;
+  }
+  .btn.large {
+    font-size: 17px;
+  }
+
+  // Remove left margin from items in rows
+  .row > [class*="span"] {
+    margin-left: 0px;
   }
 }

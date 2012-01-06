@@ -40,8 +40,7 @@
   h3 a,
   .brand {
     display: block;
-    padding: 8px 20px 12px;
-    margin-left: -20px; // negative indent to left-align the text down the page
+    padding: 8px 0px 12px;
     color: @white;
     font-size: 20px;
     font-weight: 200;
@@ -110,12 +109,6 @@
       padding: 5px 10px;
       .box-shadow(0 0 3px rgba(0,0,0,.15));
     }
-  }
-
-  // Floated items in top-bar
-  .pull-right,
-  .pull-left {
-    min-height: 40px;
   }
 
   // Hidden items in top-bar
@@ -497,6 +490,7 @@ a.menu:after,
     font-size: 18px;
     font-weight: 200;
     line-height: @baseline * 1.5;
+    margin-bottom: 0.5em;
   }
 }
 footer {
