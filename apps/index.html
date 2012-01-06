@@ -24,7 +24,6 @@
       function login(email) {
         $.cookie('email', email);
         var gravatar = "http://www.gravatar.com/avatar/" + $.md5(email) + "?s=16px";
-        console.log(gravatar);
         $.cookie('gravatar', gravatar);
         $("#signin").parent().hide();
         $("#signedin").show().find(".email").text(email);
