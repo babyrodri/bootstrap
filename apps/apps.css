@@ -1,0 +1,37 @@
+/* Apps-specific styles */
+
+
+@media (max-width: 940px) {
+
+  #signin-form .span3 {
+    display: none;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .topbar .pretext {
+    display: none;
+  }
+
+  /* Hide sign-in form / signed-in menu for small devices */
+  #signin-form,
+  #signedin {
+    display: none;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .topbar .email {
+    display: none;
+  }
+
+  .topbar .login {
+    width: 24px;
+    display: inline-block;
+  }
+
+}
