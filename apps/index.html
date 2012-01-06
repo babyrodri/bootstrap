@@ -26,7 +26,7 @@
         $.cookie('email', email);
         var gravatar = "http://www.gravatar.com/avatar/" + $.md5(email) + "?s=16px";
         $.cookie('gravatar', gravatar);
-        $("#signin").parent().addClass("hidden");
+        $("#signin-form").addClass("hidden");
         $("#signedin").removeClass("hidden").find(".email").text(email);
         $("#signedin").find(".avatar").attr("src", gravatar);
       }
@@ -34,7 +34,7 @@
       function logout() {
         $.cookie('email', null);
         $.cookie('gravatar', null);
-        $("#signin").parent().removeClass("hidden");
+        $("#signin-form").removeClass("hidden");
         $("#signedin").addClass("hidden");
       }
 

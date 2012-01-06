@@ -6,7 +6,7 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
- * Date: Tue  3 Jan 2012 14:21:44 PST
+ * Date: Fri  6 Jan 2012 14:52:06 PST
  */
 /* Reset.less
  * Props to Eric Meyer (meyerweb.com) for his CSS reset file. We're using an adapted version here	that cuts out some of the reset HTML elements we will never need here (i.e., dfn, samp, etc).
@@ -183,6 +183,7 @@ textarea {
 body {
   background-color: #ffffff;
   margin: 0;
+  padding-top: 60px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
@@ -205,9 +206,10 @@ body {
 }
 .container-fluid {
   position: relative;
-  min-width: 940px;
   padding-left: 20px;
   padding-right: 20px;
+  max-width: 1000px;
+  margin: auto;
   zoom: 1;
 }
 .container-fluid:before, .container-fluid:after {
@@ -385,294 +387,6 @@ a:hover {
 }
 .row > .offset-two-thirds {
   margin-left: 660px;
-}
-@media (max-width: 480px) {
-  .modal {
-    width: auto;
-    margin: 0;
-  }
-  .horizontal-form .control-group > label {
-    float: none;
-    width: auto;
-    padding-top: 0;
-    text-align: left;
-  }
-  .horizontal-form .controls {
-    margin-left: 0;
-  }
-  .horizontal-form .control-list {
-    padding-top: 0;
-  }
-  .horizontal-form .form-actions {
-    padding-left: 0;
-  }
-  .topbar input {
-    with: 10px;
-  }
-  .topbar .nav {
-    margin-right: 0;
-    width: 140px;
-  }
-  .topbar .brand {
-    padding: 0;
-  }
-  .topbar .email {
-    display: none;
-  }
-  .topbar .login {
-    width: 24px;
-    display: inline-block;
-  }
-}
-@media (max-width: 768px) {
-  .container-fluid {
-    width: auto;
-    padding: 0 20px;
-    min-width: 0 !important;
-  }
-  .container-fluid > .sidebar {
-    display: none;
-  }
-  .container-fluid > .content {
-    margin-left: 0;
-    width: auto;
-  }
-  .row {
-    margin-left: 0;
-  }
-  [class*="span"] {
-    float: none;
-    display: block;
-    width: auto;
-    margin: 0;
-  }
-  .topbar input {
-    width: 50px;
-  }
-  .topbar .pretext {
-    display: none;
-  }
-  .nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 180px;
-    padding-top: 40px;
-    list-style: none;
-  }
-  .nav, .nav > li:last-child a {
-    -webkit-border-radius: 0 0 4px 0;
-    -moz-border-radius: 0 0 4px 0;
-    border-radius: 0 0 4px 0;
-  }
-  .nav > li {
-    float: none;
-    display: none;
-  }
-  .nav > li > a {
-    float: none;
-    background-color: #222;
-  }
-  .nav > .active {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .navbar ul .active > a {
-    background-color: transparent;
-  }
-  /*
-    .nav > .active a:after {
-      display: inline-block;
-      width: 0;
-      height: 0;
-      margin-top: 8px;
-      margin-left: 6px;
-      text-indent: -99999px;
-      vertical-align: top;
-      border-left: 4px solid transparent;
-      border-right: 4px solid transparent;
-      border-top: 4px solid @white;
-      .opacity(100);
-      content: "&darr;";
-    }
-    .nav > .active a:hover {
-      background-color: rgba(255,255,255,.05);
-    }
-    */
-}
-@media (min-width: 768px) and (max-width: 940px) {
-  .container-fluid {
-    width: 684px;
-    min-width: 684px !important;
-  }
-  .topbar input {
-    width: 100px;
-  }
-  .topbar .pretext {
-    display: none;
-  }
-  .container-fluid > .sidebar {
-    display: none;
-  }
-  .container-fluid > .content {
-    margin-left: 0;
-    width: 728px;
-  }
-  .span1 {
-    width: 44px;
-  }
-  .span2 {
-    width: 108px;
-  }
-  .span3 {
-    width: 172px;
-  }
-  .span4 {
-    width: 236px;
-  }
-  .span5 {
-    width: 300px;
-  }
-  .span6 {
-    width: 364px;
-  }
-  .span7 {
-    width: 428px;
-  }
-  .span8 {
-    width: 492px;
-  }
-  .span9 {
-    width: 556px;
-  }
-  .span10 {
-    width: 620px;
-  }
-  .span11 {
-    width: 684px;
-  }
-  .span12 {
-    width: 748px;
-  }
-  .offset1 {
-    margin-left: 64px;
-  }
-  .offset2 {
-    margin-left: 128px;
-  }
-  .offset3 {
-    margin-left: 192px;
-  }
-  .offset4 {
-    margin-left: 256px;
-  }
-  .offset5 {
-    margin-left: 320px;
-  }
-  .offset6 {
-    margin-left: 384px;
-  }
-  .offset7 {
-    margin-left: 448px;
-  }
-  .offset8 {
-    margin-left: 512px;
-  }
-  .offset9 {
-    margin-left: 576px;
-  }
-  .offset10 {
-    margin-left: 640px;
-  }
-  .offset11 {
-    margin-left: 704px;
-  }
-  .offset12 {
-    margin-left: 768px;
-  }
-}
-@media (min-width: 1210px) {
-  .container-fluid {
-    width: 1000px;
-    min-width: 1000px !important;
-  }
-  [class*="span"] {
-    margin-left: 30px;
-  }
-  .span1 {
-    width: 70px;
-  }
-  .span2 {
-    width: 170px;
-  }
-  .span3 {
-    width: 270px;
-  }
-  .span4 {
-    width: 370px;
-  }
-  .span5 {
-    width: 470px;
-  }
-  .span6 {
-    width: 570px;
-  }
-  .span7 {
-    width: 670px;
-  }
-  .span8 {
-    width: 770px;
-  }
-  .span9 {
-    width: 870px;
-  }
-  .span10 {
-    width: 970px;
-  }
-  .span11 {
-    width: 1070px;
-  }
-  .span12 {
-    width: 1170px;
-  }
-  .offset1 {
-    margin-left: 100px;
-  }
-  .offset2 {
-    margin-left: 200px;
-  }
-  .offset3 {
-    margin-left: 300px;
-  }
-  .offset4 {
-    margin-left: 400px;
-  }
-  .offset5 {
-    margin-left: 500px;
-  }
-  .offset6 {
-    margin-left: 600px;
-  }
-  .offset7 {
-    margin-left: 700px;
-  }
-  .offset8 {
-    margin-left: 800px;
-  }
-  .offset9 {
-    margin-left: 900px;
-  }
-  .offset10 {
-    margin-left: 1000px;
-  }
-  .offset11 {
-    margin-left: 1100px;
-  }
-  .offset12 {
-    margin-left: 1200px;
-  }
 }
 /* Typography.less
  * Headings, body text, lists, code, and more for a versatile and durable typography system
@@ -1601,7 +1315,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   color: #bfbfbf;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
-.topbar h3 a:hover, .topbar .brand:hover, .topbar ul .active > a {
+.topbar h3 a:hover, .topbar ul .active > a {
   background-color: #333;
   background-color: rgba(255, 255, 255, 0.05);
   color: #ffffff;
@@ -1610,12 +1324,18 @@ table .headerSortUp.purple, table .headerSortDown.purple {
 .topbar h3 {
   position: relative;
 }
-.topbar h3 a, .topbar .brand {
-  float: left;
-  display: block;
-  padding: 8px 20px 12px;
-  margin-left: -20px;
+.topbar h3 a, .topbar .title, .topbar .brand {
   color: #ffffff;
+  display: block;
+  font-size: 15px;
+  left: 0;
+  padding: 0.7em 0 0.7em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.topbar h3 a, .topbar .brand {
+  padding: 8px 0px 12px;
   font-size: 20px;
   font-weight: 200;
   line-height: 1;
@@ -1651,6 +1371,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   color: #ffffff;
   color: rgba(255, 255, 255, 0.75);
   border: 1px solid #111;
+  width: 100px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -1684,6 +1405,9 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+}
+.topbar .hidden {
+  display: none;
 }
 .topbar-inner, .topbar .fill {
   background-color: #222;
@@ -2072,6 +1796,7 @@ a.menu:after, .dropdown-toggle:after {
   font-size: 18px;
   font-weight: 200;
   line-height: 27px;
+  margin-bottom: 0.5em;
 }
 footer {
   margin-top: 17px;
@@ -2753,4 +2478,224 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+}
+@media (max-width: 940px) {
+  .container-fluid {
+    width: 684px;
+    min-width: 684px !important;
+    margin: auto;
+  }
+  .topbar .container-fluid {
+    width: auto;
+    min-width: auto !important;
+  }
+  #signin-form .span3 {
+    display: none;
+  }
+  #signedin .email {
+    display: none;
+  }
+  .topbar input {
+    width: 100px;
+  }
+  .container-fluid > .sidebar {
+    display: none;
+  }
+  .container-fluid > .content {
+    margin-left: 0;
+  }
+  .span1 {
+    width: 44px;
+  }
+  .span2 {
+    width: 108px;
+  }
+  .span3 {
+    width: 172px;
+  }
+  .span4 {
+    width: 236px;
+  }
+  .span5 {
+    width: 300px;
+  }
+  .span6 {
+    width: 364px;
+  }
+  .span7 {
+    width: 428px;
+  }
+  .span8 {
+    width: 492px;
+  }
+  .span9 {
+    width: 556px;
+  }
+  .span10 {
+    width: 620px;
+  }
+  .span11 {
+    width: 684px;
+  }
+  .span12 {
+    width: 748px;
+  }
+  .offset1 {
+    margin-left: 64px;
+  }
+  .offset2 {
+    margin-left: 128px;
+  }
+  .offset3 {
+    margin-left: 192px;
+  }
+  .offset4 {
+    margin-left: 256px;
+  }
+  .offset5 {
+    margin-left: 320px;
+  }
+  .offset6 {
+    margin-left: 384px;
+  }
+  .offset7 {
+    margin-left: 448px;
+  }
+  .offset8 {
+    margin-left: 512px;
+  }
+  .offset9 {
+    margin-left: 576px;
+  }
+  .offset10 {
+    margin-left: 640px;
+  }
+  .offset11 {
+    margin-left: 704px;
+  }
+  .offset12 {
+    margin-left: 768px;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    padding-top: 64px;
+  }
+  .topbar {
+    height: 44px;
+  }
+  .topbar div > ul a, .nav a {
+    font-size: 15px;
+    padding: 12px 15px 14px;
+  }
+  .topbar h3 a, .topbar .brand {
+    padding: 10px 0 14px;
+  }
+  .topbar input {
+    font-size: 15px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+  }
+  .container-fluid {
+    width: auto;
+    padding: 0 20px;
+    min-width: 0 !important;
+  }
+  .container-fluid > .content {
+    width: auto;
+  }
+  .row {
+    margin-left: 0;
+  }
+  [class*="span"] {
+    float: none;
+    display: block;
+    width: auto;
+    margin: 0;
+  }
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style: none;
+  }
+  .nav, .nav > li:last-child a {
+    -webkit-border-radius: 0 0 4px 0;
+    -moz-border-radius: 0 0 4px 0;
+    border-radius: 0 0 4px 0;
+  }
+  .nav > li {
+    float: none;
+    display: none;
+  }
+  .nav > li > a {
+    float: none;
+  }
+  .nav > .active {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .navbar ul .active > a {
+    background-color: transparent;
+  }
+  /*
+    .nav > .active a:after {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      margin-top: 8px;
+      margin-left: 6px;
+      text-indent: -99999px;
+      vertical-align: top;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 4px solid @white;
+      .opacity(100);
+      content: "&darr;";
+    }
+    .nav > .active a:hover {
+      background-color: rgba(255,255,255,.05);
+    }
+    */
+}
+@media (max-width: 480px) {
+  body {
+    padding-top: 60px;
+  }
+  .container-fluid {
+    padding: 0 10px;
+  }
+  .modal {
+    width: auto;
+    margin: 0;
+  }
+  .horizontal-form .control-group > label {
+    float: none;
+    width: auto;
+    padding-top: 0;
+    text-align: left;
+  }
+  .horizontal-form .controls {
+    margin-left: 0;
+  }
+  .horizontal-form .control-list {
+    padding-top: 0;
+  }
+  .horizontal-form .form-actions {
+    padding-left: 0;
+  }
+  .topbar input {
+    width: 10px;
+  }
+  .btn, p {
+    font-size: 15px;
+  }
+  .btn.large {
+    font-size: 17px;
+  }
+  .row > [class*="span"] {
+    margin-left: 0px;
+  }
 }
