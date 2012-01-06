@@ -160,9 +160,6 @@
     width: auto;
     margin: 0;
   }
-  .topbar input {
-    width: 50px;
-  }
   // Make the nav work for small devices
   .nav {
     position: absolute;
@@ -191,6 +188,13 @@
   .navbar ul .active > a {
     background-color: transparent;
   }
+
+  // Hide sign-in form / signed-in menu for small devices
+  #signin-form,
+  #signedin {
+    display: none;
+  }
+
 /*
   .nav > .active a:after {
     display: inline-block;
