@@ -25,16 +25,16 @@
         $.cookie('email', email);
         var gravatar = "http://www.gravatar.com/avatar/" + $.md5(email) + "?s=16px";
         $.cookie('gravatar', gravatar);
-        $("#signin").parent().hide();
-        $("#signedin").show().find(".email").text(email);
+        $("#signin").parent().addClass("hidden");
+        $("#signedin").removeClass("hidden").find(".email").text(email);
         $("#signedin").find(".avatar").attr("src", gravatar);
       }
 
       function logout() {
         $.cookie('email', null);
         $.cookie('gravatar', null);
-        $("#signin").parent().show();
-        $("#signedin").hide();
+        $("#signin").parent().removeClass("hidden");
+        $("#signedin").addClass("hidden");
       }
 
       $(document).ready(function () {
@@ -62,9 +62,6 @@
     <style type="text/css">
       body {
         padding-top: 60px;
-      }
-      #signedin {
-        display: none;
       }
       .avatar {
         vertical-align: middle;
@@ -98,7 +95,7 @@
               <input class="span3" type="text" placeholder="email">
               <button id="signin" class="btn" type="submit">Sign in</button>
             </form>
-            <ul id="signedin" class="nav secondary-nav" data-dropdown="dropdown">
+            <ul id="signedin" class="nav secondary-nav hidden" data-dropdown="dropdown">
               <li class="dropdown">
                 <a class="dropdown-toggle" href="#"><img class="avatar" src=""/><span class="email">clarkbw@example.com</span></a>
                 <ul class="dropdown-menu">
