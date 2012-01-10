@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Horse Pinball EXTREME :: Mozilla Apps Market</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery-1.7.1.min.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/jquery.md5.js"></script>
+    <script src="../js/bootstrap-dropdown.js"></script>
+    <script src="../js/bootstrap-twipsy.js"></script>
+    <script src="../js/bootstrap-scrollspy.js"></script>
+
+    <script type="text/javascript">
+
+      function login(email) {
+        $.cookie('email', email);
+        var gravatar = "http://www.gravatar.com/avatar/" + $.md5(email) + "?s=16px";
+        $.cookie('gravatar', gravatar);
+        $("#signin").parent().addClass("hidden");
+        $("#signedin").removeClass("hidden").find(".email").text(email);
+        $("#signedin").find(".avatar").attr("src", gravatar);
+      }
+
+      function logout() {
+        $.cookie('email', null);
+        $.cookie('gravatar', null);
+        $("#signin").parent().removeClass("hidden");
+        $("#signedin").addClass("hidden");
+      }
+
+      $(document).ready(function () {
+
+        if ($.cookie('email')) {
+          login($.cookie('email'));
+        }
+
+        $("#signin").click(function () {
+          var val = $(this).prev("input[type=text]").val();
+          if (val) {
+            login(val);
+          }
+          return false;
+        });
+
+        $("#logout").click(function () {
+          logout();
+        });
+      });
+    </script>
+
+    <!-- Le styles -->
+    <link href="../bootstrap.css" rel="stylesheet">
+    <link href="apps.css" rel="stylesheet">
+    <style type="text/css">
+      .avatar {
+        vertical-align: middle;
+        margin: 0 5px;
+      }
+    </style>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+
+    <div class="topbar" data-scrollspy="scrollspy">
+      <div class="topbar-inner">
+        <div class="container-fluid">
+          <span class="title">Horse Pinball Extreme</span>
+          <ul class="nav pull-left">
+            <li>
+              <a href="#">Back</a>
+            </li>
+          </ul>
+          <div class="pull-right">
+            <form action="">
+              <input type="text" placeholder="Search"/>
+            </form>
+            <form id="signin-form" onsubmit="return false;" class="nav secondary-nav pull-right">
+              <input class="span3" type="text" placeholder="email">
+              <button id="signin" class="btn" type="submit">Sign in</button>
+            </form>
+            <ul id="signedin" class="nav secondary-nav hidden" data-dropdown="dropdown">
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="#"><img class="avatar" src=""/><span class="email">clarkbw@example.com</span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">My Apps</a></li>
+                  <li class="divider"></li>
+                  <li><a id="logout" href="#">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid no-sidebar">
+      <div class="content">
+<div class="row">
+  <div class="span16">
+    <div class="app-icon-section">
+      <img class="app-icon" alt="" src="http://placehold.it/256x256">
+      <p class="compatibility-header">
+        Designed for
+      </p>
+      <ul class="compatibility-list">
+        <li>Phones</li>
+        <li>Tablets</li>
+      </ul>
+    </div>
+    <div class="app-info-section">
+      <h2>Horse Pinball EXTREME</h2>
+      <p class="dev-name">Electronique Arts</p>
+      <p>
+        <span class="rating positive">1876</span>
+        <span class="rating negative">485</span>
+      </p>
+      <p>
+        <a class="btn large primary" href="#">FREE</a>
+        <a class="btn large" href="#">Share</a>
+      </p>
+    </div>
+    <div class="app-description">
+      <p>
+        Horse Pinball helps you find your favorite movies, books, or music albums. As you visit sites like Amazon, IMDB, and Wikipedia, Horses suggest things you'll like.
+      </p>
+      <p class="pull-right"><a href="#">Read More &raquo;</a></p>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="row">
+    <div class="span16">
+      <ul class="media-grid">
+          <li>
+              <a href="#">
+                  <img class="thumbnail" src="http://placehold.it/90x90" alt="">
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  <img class="thumbnail" src="http://placehold.it/90x90" alt="">
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  <img class="thumbnail" src="http://placehold.it/90x90" alt="">
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  <img class="thumbnail" src="http://placehold.it/90x90" alt="">
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  <img class="thumbnail" src="http://placehold.it/90x90" alt="">
+              </a>
+          </li>
+      </ul>
+  </div>
+</div>
+
+
+        <h2>Recommended By</h2>
+        <div class="row">
+            <div class="span3">
+                <a href="#">Download.com</a>
+            </div>
+            <div class="span3">
+                <a href="#">Download.com</a>
+            </div>
+            <div class="span3">
+                <a href="#">Download.com</a>
+            </div>
+        </div>
+
+        <h2>Latest Ratings</h2>
+        <img src="http://placehold.it/300x140" alt="">
+        <span class="rating positive">34</span>
+        <span class="rating negative">16</span>
+
+        <h2>All Ratings</h2>
+
+        <ul class="tabs">
+            <li class="active"><a class="rating positive" href="#">1876</a></li>
+            <li><a class="rating negative" href="#">485</a></li>
+        </ul>
+
+        <ul class="well">
+            <li><a href="#">Horse Pinball EXTREME Help</a></li>
+            <li><a href="#">Horse Pinball EXTREME Homepage</a></li>
+        </ul>
+        
+
+        <footer>
+
+        </footer>
+      </div>
+    </div>
+
+  </body>
+</html>

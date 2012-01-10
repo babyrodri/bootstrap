@@ -1,6 +1,55 @@
 /* Apps-specific styles */
 
 
+/*
+  DETAILS PAGE
+*/
+
+.app-icon-section {
+  display: inline;
+  float: left;
+  width: 20%;
+}
+
+.app-icon-section .app-icon {
+  width: 100%;
+}
+
+.compatibility-header {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.compatibility-list {
+  font-size: 14px;
+  list-style: none;
+}
+
+.app-info-section h2 {
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.app-info-section,
+.app-description {
+  float: left;
+  margin-left: 5%;
+  width: 75%;
+}
+
+.dev-name {
+  font-style: italic;
+  font-size: 15px;
+}
+
+.rating {
+  font-weight: bold;
+}
+
+.app-description {
+  max-width: 35em;
+}
+
 @media (max-width: 940px) {
 
   #signin-form .span3 {
@@ -25,10 +74,13 @@
     display: none;
   }
 
+  /* Details Page */
+  .app-info-section h2 {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 480px) {
-
   .topbar .email {
     display: none;
   }
@@ -36,6 +88,27 @@
   .topbar .login {
     width: 24px;
     display: inline-block;
+  }
+
+
+  /* Details Page */
+  .app-icon-section {
+    max-width: 100px;
+    width: 30%;
+  }
+
+  .app-info-section,
+  .app-description {
+    width: 65%;
+  }
+
+  .app-description {
+    clear: both;
+    margin-left: 0;
+    width: auto;
+  }
+
+  .app-info-section h2 {
   }
 
 }
