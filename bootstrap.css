@@ -6,7 +6,7 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
- * Date: Fri  6 Jan 2012 14:52:06 PST
+ * Date: Wed 18 Jan 2012 14:09:30 PST
  */
 /* Reset.less
  * Props to Eric Meyer (meyerweb.com) for his CSS reset file. We're using an adapted version here	that cuts out some of the reset HTML elements we will never need here (i.e., dfn, samp, etc).
@@ -208,7 +208,7 @@ body {
   position: relative;
   padding-left: 20px;
   padding-right: 20px;
-  max-width: 1000px;
+  max-width: 940px;
   margin: auto;
   zoom: 1;
 }
@@ -228,6 +228,12 @@ body {
 }
 .container-fluid > .content {
   margin-left: 240px;
+}
+.container-fluid.no-sidebar > .sidebar {
+  display: none;
+}
+.container-fluid.no-sidebar > .content {
+  margin-left: auto;
 }
 a {
   color: #0069d6;
@@ -2489,20 +2495,8 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
     width: auto;
     min-width: auto !important;
   }
-  #signin-form .span3 {
-    display: none;
-  }
-  #signedin .email {
-    display: none;
-  }
   .topbar input {
     width: 100px;
-  }
-  .container-fluid > .sidebar {
-    display: none;
-  }
-  .container-fluid > .content {
-    margin-left: 0;
   }
   .span1 {
     width: 44px;
@@ -2691,11 +2685,65 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   }
   .btn, p {
     font-size: 15px;
+    margin-bottom: 10px;
   }
   .btn.large {
     font-size: 17px;
+    margin-bottom: 10px;
   }
   .row > [class*="span"] {
     margin-left: 0px;
   }
+}
+.primary-feature-unit {
+  background-color: #f5f5f5;
+  margin-bottom: 30px;
+  padding: 30px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.primary-feature-unit h1 {
+  margin-bottom: 0;
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+.primary-feature-unit p {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 27px;
+  margin-bottom: 0.5em;
+}
+.feature-unit {
+  background-color: #fafafa;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+.feature-unit img {
+  width: 48px;
+  height: 48px;
+  margin: 5px 15px;
+}
+.feature-unit h2 {
+  padding: 15px;
+}
+.feature-unit p {
+  padding: 5px 15px;
+}
+.categories {
+  margin-bottom: 10px;
+}
+.category {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+  border: 1px solid #aaa;
+  width: 100px;
+  height: 48px;
+  vertical-align: bottom;
+  margin-bottom: 20px;
 }
