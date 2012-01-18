@@ -20,43 +20,7 @@
     <script src="../js/bootstrap-twipsy.js"></script>
     <script src="../js/bootstrap-scrollspy.js"></script>
 
-    <script type="text/javascript">
-
-      function login(email) {
-        $.cookie('email', email);
-        var gravatar = "http://www.gravatar.com/avatar/" + $.md5(email) + "?s=16px";
-        $.cookie('gravatar', gravatar);
-        $("#signin").parent().addClass("hidden");
-        $("#signedin").removeClass("hidden").find(".email").text(email);
-        $("#signedin").find(".avatar").attr("src", gravatar);
-      }
-
-      function logout() {
-        $.cookie('email', null);
-        $.cookie('gravatar', null);
-        $("#signin").parent().removeClass("hidden");
-        $("#signedin").addClass("hidden");
-      }
-
-      $(document).ready(function () {
-
-        if ($.cookie('email')) {
-          login($.cookie('email'));
-        }
-
-        $("#signin").click(function () {
-          var val = $(this).prev("input[type=text]").val();
-          if (val) {
-            login(val);
-          }
-          return false;
-        });
-
-        $("#logout").click(function () {
-          logout();
-        });
-      });
-    </script>
+    <script src="../js/account-functions.js"></script>
 
     <!-- Le styles -->
     <link href="../bootstrap.css" rel="stylesheet">
@@ -202,14 +166,29 @@
             <li><a class="rating negative" href="#">485</a></li>
         </ul>
 
-        <ul class="well">
+        <ul>
             <li><a href="#">Horse Pinball EXTREME Help</a></li>
             <li><a href="#">Horse Pinball EXTREME Homepage</a></li>
         </ul>
         
 
-        <footer>
+        <section>
+          <div class="well">
+            <h3>Your Account</h3>
+            <form id="signin-form" onsubmit="return false;" class="row">
+              <input class="span6" type="text" placeholder="email">
+              <button id="signin" class="btn primary span2" type="submit">Sign in</button>
+            </form>
+            <div id="signedin" class="row" style="display:none;">
+              <div class="span-one-third"><img class="avatar" src=""/><span class="email">clarkbw@example.com</span></div>
+              <div class="span-one-third"><a href="#">My Apps</a></div>
+              <div class="span3 offset13"><a id="logout" href="#">Logout</a></div>
+            </div>
+          </div>
+        </section>
 
+        <footer>
+          <p>&copy; Company 2011</p>
         </footer>
       </div>
     </div>
