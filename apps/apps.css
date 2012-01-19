@@ -55,6 +55,10 @@
 
 @media (max-width: 940px) {
 
+  /*  this is the apps vs. add-ons distinction */
+  .topbar .app-add-on {
+    display: none;
+  }
 
 }
 
