@@ -32,4 +32,8 @@ $(document).ready(function () {
   $("#logout").click(function () {
     logout();
   });
+
+  $(".details").click(function () {
+    window.location.href = "details.html";
+  });
 });
