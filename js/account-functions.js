@@ -36,4 +36,12 @@ $(document).ready(function () {
   $(".details").click(function () {
     window.location.href = "details.html";
   });
+
+  $("#add-ons").click(function () {
+    alert("You'd be taken to the add-ons listing");
+  });
+
+  $("#back").click(function () {
+    window.history.back();
+  });
 });
