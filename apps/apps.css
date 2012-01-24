@@ -53,6 +53,56 @@
   max-width: 35em;
 }
 
+.previews {
+  overflow: hidden;
+  position: relative;
+}
+
+.previews .control {
+  display: block;
+  font-size: 400%;
+  position: absolute;
+  height: 100%;
+  line-height: 112px;
+  min-width: 1ex;
+  top: 0;
+  width: 5%;
+  z-index: 30;
+}
+
+.previews .control.next {
+  right: 0;
+}
+
+.preview {
+  position: relative;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.panel {
+  display: inline-block;
+  top: 0;
+  vertical-align: top;
+  white-space: normal;
+}
+
+.previews li a {
+  display: block;
+  margin 0pt auto;
+  padding: 5px;
+  position: relative;
+  text-align: center;
+  top: 0;
+}
+
+.previews li a img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+
 @media (max-width: 940px) {
 
   /*  this is the apps vs. add-ons distinction */
@@ -94,9 +144,6 @@
     clear: both;
     margin-left: 0;
     width: auto;
-  }
-
-  .app-info-section h2 {
   }
 
 }
