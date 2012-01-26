@@ -69,19 +69,43 @@
 
     <div class="container-fluid no-sidebar">
       <div class="content">
-        <!-- Main hero unit for a primary marketing message or call to action -->
+        <h1>General</h1>
+        <h2>Section Heading</h2>
+        <h2>Tabs</h2>
+        <h2>Apps List</h2>
+        <h2>List of Links</h2>
+        <h2>Footer</h2>
+        <section>
+          <div class="well">
+            <h3>Your Account</h3>
+            <form id="signin-form" onsubmit="return false;" class="row">
+              <input class="span6" type="text" placeholder="email">
+              <button id="signin" class="btn primary span2" type="submit">Sign in</button>
+            </form>
+            <div id="signedin" class="row" style="display:none;">
+              <div class="span-one-third"><img class="avatar" src=""/><span class="email">clarkbw@example.com</span></div>
+              <div class="span-one-third"><a href="#">My Apps</a></div>
+              <div class="span3 offset13"><a id="logout" href="#">Logout</a></div>
+            </div>
+          </div>
+        </section>
+
+        <footer>
+          <p>&copy; Company 2011</p>
+        </footer>
+        <hr>
+        <h1>Collections</h1>
+        <h2>Collections Preview</h2>
+        <h2>Expanded Collections</h2>
+        <hr>
+        <h1>Browsing</h1>
+        <h2>Main Featured App Tile</h2>
         <div class="primary-feature-unit">
           <h1>Main Feature App</h1>
           <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
           <p><a class="btn primary large details">View details &raquo;</a></p>
         </div>
-        <!-- Show only as needed when the user dives into a category -->
-        <ul class="breadcrumb">
-          <li><a href="#">Apps</a> <span class="divider">/</span></li>
-          <li><a href="#">Category</a> <span class="divider">/</span></li>
-          <li><a href="#">Category</a> <span class="divider">/</span></li>
-          <li class="active">Application</li>
-        </ul>
+        <h2>Featured App Tiles</h2>
         <section id="recommendations">
           <!-- Example row of columns -->
           <div class="row">
@@ -126,7 +150,7 @@
             </div>
           </div>
         </section>
-
+        <h2>Category Tiles</h2>
         <section class="categories">
           <div class="row">
             <div class="category span2">
@@ -155,7 +179,9 @@
             </div>
           </div>
         </section>
-
+        <hr>
+        <h1>Details</h1>
+        <h2>Info Section</h2>
         <div class="row">
           <div class="span16">
             <div class="app-icon-section">
@@ -188,90 +214,68 @@
             </div>
           </div>
         </div>
-        <hr>
+        <h2>Screenshots</h2>
         <div class="row">
-            <div class="span16">
-              <ul class="media-grid">
-                  <li>
-                      <a href="#">
-                          <img class="thumbnail" src="http://placehold.it/90x90" alt="">
-                      </a>
-                  </li>
-                  <li>
-                      <a href="#">
-                          <img class="thumbnail" src="http://placehold.it/90x90" alt="">
-                      </a>
-                  </li>
-                  <li>
-                      <a href="#">
-                          <img class="thumbnail" src="http://placehold.it/90x90" alt="">
-                      </a>
-                  </li>
-                  <li>
-                      <a href="#">
-                          <img class="thumbnail" src="http://placehold.it/90x90" alt="">
-                      </a>
-                  </li>
-                  <li>
-                      <a href="#">
-                          <img class="thumbnail" src="http://placehold.it/90x90" alt="">
-                      </a>
-                  </li>
+          <div class="span16">
+            <div class="previews">
+              <a class="control prev" href="#">&laquo;</a>
+              <a class="control next" href="#">&raquo;</a>
+              <ul class="preview" style="left: 0%;">
+                <li class="panel">
+                  <a href="#" class="screenshot landscape">
+                    <img src="http://placehold.it/112x75" alt="">
+                  </a>
+                </li>
+                <li class="panel">
+                  <a href="#" class="screenshot landscape">
+                    <img src="http://placehold.it/112x75" alt="">
+                  </a>
+                </li>
+                <li class="panel">
+                  <a href="#" class="screenshot landscape">
+                    <img src="http://placehold.it/112x75" alt="">
+                  </a>
+                </li>
+                <li class="panel">
+                  <a href="#" class="screenshot portrait">
+                    <img src="http://placehold.it/75x112" alt="">
+                  </a>
+                </li>
+                <li class="panel">
+                  <a href="#" class="screenshot portrait">
+                    <img src="http://placehold.it/75x112" alt="">
+                  </a>
+                </li>
+                <li class="panel">
+                  <a href="#" class="screenshot landscape">
+                    <img src="http://placehold.it/112x75" alt="">
+                  </a>
+                </li>
+                <li class="panel">
+                  <a href="#" class="screenshot landscape">
+                    <img src="http://placehold.it/112x75" alt="">
+                  </a>
+                </li>
+                <li class="panel">
+                  <a href="#" class="screenshot portrait">
+                    <img src="http://placehold.it/75x112" alt="">
+                  </a>
+                </li>
               </ul>
-          </div>
-        </div>
-
-
-        <h2>Recommended By</h2>
-        <div class="row">
-            <div class="span3">
-                <a href="#">Download.com</a>
-            </div>
-            <div class="span3">
-                <a href="#">Download.com</a>
-            </div>
-            <div class="span3">
-                <a href="#">Download.com</a>
-            </div>
-        </div>
-
-        <h2>Latest Ratings</h2>
-        <img src="http://placehold.it/300x140" alt="">
-        <span class="rating positive">34</span>
-        <span class="rating negative">16</span>
-
-        <h2>All Ratings</h2>
-
-        <ul class="tabs">
-            <li class="active"><a class="rating positive" href="#">1876</a></li>
-            <li><a class="rating negative" href="#">485</a></li>
-        </ul>
-
-        <ul>
-            <li><a href="#">Horse Pinball EXTREME Help</a></li>
-            <li><a href="#">Horse Pinball EXTREME Homepage</a></li>
-        </ul>
-
-        <section>
-          <div class="well">
-            <h3>Your Account</h3>
-            <form id="signin-form" onsubmit="return false;" class="row">
-              <input class="span6" type="text" placeholder="email">
-              <button id="signin" class="btn primary span2" type="submit">Sign in</button>
-            </form>
-            <div id="signedin" class="row" style="display:none;">
-              <div class="span-one-third"><img class="avatar" src=""/><span class="email">clarkbw@example.com</span></div>
-              <div class="span-one-third"><a href="#">My Apps</a></div>
-              <div class="span3 offset13"><a id="logout" href="#">Logout</a></div>
             </div>
           </div>
-        </section>
-
-        <footer>
-          <p>&copy; Company 2011</p>
-        </footer>
-      </div>
-    </div>
-
+        </div>
+        <h2>Recommendations</h2>
+        <h2>Ratings Graph</h2>
+        <h2>Reviews List</h2>
+        <hr>
+        <h1>Search</h1>
+        <h2>Search Bar</h2>
+        <h2>No Results Message</h2>
+        <h2>Suggestion List</h2>
+        <hr>
+        <h1>Account History</h1>
+        <h2>Purchase History List</h2>
+        <h2>Rating Widget</h2>
   </body>
 </html>
