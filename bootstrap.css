@@ -6,7 +6,7 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
- * Date: Thu Jan 26 15:04:19 PST 2012
+ * Date: Fri 27 Jan 2012 14:05:04 PST
  */
 article,
 aside,
@@ -1828,7 +1828,7 @@ table .span12 {
 .navbar-search .search-query :-moz-placeholder {
   color: #eeeeee;
 }
-.navbar-search .search-query ::-webkit-input-placeholder {
+.navbar-search .search-query::-webkit-input-placeholder {
   color: #eeeeee;
 }
 .navbar-search .search-query:hover {
@@ -3011,4 +3011,23 @@ a.thumbnail:hover {
 }
 .invisible {
   visibility: hidden;
+}
+.main-feature .thumbnails > li {
+  margin-left: 0;
+}
+@media (max-width: 768px) {
+  .main-feature, .secondary-features {
+    display: none;
+  }
+  .navbar-search .search-query {
+    width: 100px;
+  }
+}
+@media (max-width: 480px) {
+  .navbar-search .search-query {
+    width: 16px;
+  }
+  .features .btn {
+    display: none;
+  }
 }

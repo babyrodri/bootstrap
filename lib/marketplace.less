@@ -1,0 +1,48 @@
+// Marketplace.less
+// Mozilla Marketplace specific code
+// -----------------------------------------------------------------
+
+.main-feature {
+  .thumbnails > li {
+    margin-left: 0;
+  }
+}
+
+.features {
+  
+}
+
+.secondary-features {
+  .features();
+}
+
+// LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
+// --------------------------------------------------
+
+@media (max-width: 768px) {
+  .main-feature,
+  .secondary-features {
+    .hide();
+  }
+  .navbar-search {
+    .search-query {
+      width: 100px;
+    }
+  }
+}
+
+// UP TO LANDSCAPE PHONE
+// ---------------------
+
+@media (max-width: 480px) {
+  .navbar-search {
+    .search-query {
+      width: 16px;
+    }
+  }
+  .features {
+    .btn {
+      .hide();
+    }
+  }
+}
