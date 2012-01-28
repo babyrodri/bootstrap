@@ -552,4 +552,6 @@ a.thumbnail:hover{border-color:#0088cc;-webkit-box-shadow:0 1px 4px rgba(0, 105,
 .show{display:block;}
 .invisible{visibility:hidden;}
 .main-feature .thumbnails>li{margin-left:0;}
-@media (max-width:768px){.main-feature,.secondary-features{display:none;} .navbar-search .search-query{width:100px;}}@media (max-width:480px){.navbar-search .search-query{width:16px;} .features .btn{display:none;}}
+.compatibility-list>li{margin-left:20px;}
+.review{margin:20px;}
+@media (max-width:768px){.main-feature,.secondary-features{display:none;} .navbar-search .search-query{width:100px;} #chart_div{display:none;}}@media (max-width:480px){.navbar-search .search-query{width:16px;} .features .btn{display:none;} .app-info-section .btn{display:block;margin:0 auto 20px;text-align:center;}}

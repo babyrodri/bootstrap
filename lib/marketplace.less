@@ -16,6 +16,14 @@
   .features();
 }
 
+.compatibility-list > li {
+  margin-left: @gridGutterWidth;
+}
+
+.review {
+  margin: @gridGutterWidth;
+}
+
 // LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
 // --------------------------------------------------
 
@@ -28,6 +36,9 @@
     .search-query {
       width: 100px;
     }
+  }
+  #chart_div {
+    .hide();
   }
 }
 
@@ -43,6 +54,13 @@
   .features {
     .btn {
       .hide();
+    }
+  }
+  .app-info-section {
+    .btn {
+      display: block;
+      margin: 0 auto @gridGutterWidth;
+      text-align: center;
     }
   }
 }
