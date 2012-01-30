@@ -66,9 +66,22 @@
       display: block;
       .span6();
     }
+    .nav.tabs > .active {
+      .span6();
+    }
     // Hide the tab navigation for reviews at Desktop sizes
-    .nav.tabs {
-      display: none;
+    .nav.tabs > .active > a {
+      border: none;
+    }
+    // Cancel out the link color of the non-active tab
+    .nav.tabs > li > a {
+      color: @gray;
+    }
+    // Cancel out the hover effects of the non-active tab
+    .nav.tabs > li > a:hover {
+      background-color: @white;
+      border-color: @white @white #ddd;
+      cursor: default;
     }
   }
   // Show reviews as two columns in Desktop view
