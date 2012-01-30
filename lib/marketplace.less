@@ -22,8 +22,52 @@
   margin-left: @gridGutterWidth;
 }
 
-.review {
-  margin: @gridGutterWidth;
+.reviews {
+  .review {
+    margin: 10px;
+    .row {
+      margin-left: 0;
+    }
+    .review-meta {
+      .avatar {
+        margin: 0 5px 5px 0;
+      }
+      .name {
+        font-weight: bold;
+      }
+      .date {
+        color: @grayLight;
+      }
+    }
+  }
+}
+
+// PORTRAIT TABLET TO DEFAULT DESKTOP
+// ----------------------------------
+
+@media (min-width: 940px) {
+  .all-reviews {
+    .tab-content {
+      .row();
+      margin-left: 0px;
+    }
+    // Force our review tabs to always show at Desktop sizes
+    .tab-content > .tab-pane {
+      display: block;
+      .span6();
+    }
+    // Hide the tab navigation for reviews at Desktop sizes
+    .nav.tabs {
+      display: none;
+    }
+  }
+  // Show reviews as two columns in Desktop view
+  #negative-reviews {
+    .pull-right();
+  }
+  #positive-reviews {
+    .pull-left();
+  }
 }
 
 // LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET

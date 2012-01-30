@@ -553,5 +553,8 @@ a.thumbnail:hover{border-color:#0088cc;-webkit-box-shadow:0 1px 4px rgba(0, 105,
 .invisible{visibility:hidden;}
 .content>.row{margin-left:0px;}
 .compatibility-list>li{margin-left:20px;}
-.review{margin:20px;}
-@media (max-width:768px){.main-feature,.secondary-features{display:none;} .navbar-search .search-query{width:100px;} #chart_div{display:none;}}@media (max-width:480px){.navbar-search .search-query{width:16px;} .features .btn{display:none;} .app-info-section .btn{display:block;margin:0 auto 20px;text-align:center;}}
+.reviews .review{margin:10px;}.reviews .review .row{margin-left:0;}
+.reviews .review .review-meta .avatar{margin:0 5px 5px 0;}
+.reviews .review .review-meta .name{font-weight:bold;}
+.reviews .review .review-meta .date{color:#999999;}
+@media (min-width:940px){.all-reviews .tab-content{margin-left:-20px;*zoom:1;margin-left:0px;}.all-reviews .tab-content:before,.all-reviews .tab-content:after{display:table;content:"";} .all-reviews .tab-content:after{clear:both;} .all-reviews .tab-content>.tab-pane{display:block;width:460px;} .all-reviews .nav.tabs{display:none;} .all-reviews>.tab-content>#negative-reviews{float:right;} .all-reviews>.tab-content>#positive-reviews{float:left;}}@media (max-width:768px){.main-feature,.secondary-features{display:none;} .navbar-search .search-query{width:100px;} #chart_div{display:none;}}@media (max-width:480px){.navbar-search .search-query{width:16px;} .features .btn{display:none;} .app-info-section .btn{display:block;margin:0 auto 20px;text-align:center;}}
