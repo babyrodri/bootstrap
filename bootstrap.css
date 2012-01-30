@@ -6,7 +6,7 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
- * Date: Mon 30 Jan 2012 14:14:58 PST
+ * Date: Mon 30 Jan 2012 14:43:36 PST
  */
 article,
 aside,
@@ -3018,6 +3018,12 @@ a.thumbnail:hover {
 .compatibility-list > li {
   margin-left: 20px;
 }
+.app-icon-section {
+  margin-left: 0;
+}
+.app-description p.more {
+  display: none;
+}
 .reviews .review {
   margin: 10px;
 }
@@ -3053,10 +3059,10 @@ a.thumbnail:hover {
   .all-reviews .nav.tabs {
     display: none;
   }
-  .all-reviews > .tab-content > #negative-reviews {
+  #negative-reviews {
     float: right;
   }
-  .all-reviews > .tab-content > #positive-reviews {
+  #positive-reviews {
     float: left;
   }
 }
