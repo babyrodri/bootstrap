@@ -11,24 +11,9 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="../js/bootstrap-transition.js"></script>
-    <script src="../js/bootstrap-carousel.js"></script>
-
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#featureCarousel').carousel();
-      });
-    </script>
-
     <!-- Le styles -->
-    <link href="../bootstrap.css" rel="stylesheet">
-    <link href="../bootstrap-responsive.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-      }
-    </style>
+    <link href="../docs/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -39,13 +24,23 @@
 
   <body>
 
-    <div class="navbar navbar-fixed">
+    <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
           <a class="brand" href="#">Mozilla Marketplace</a>
-          <form class="navbar-search navbar-form pull-right" action="">
-            <input type="text" class="search-query" placeholder="Search">
-          </form>
+          <div class="nav-collapse">
+            <ul class="nav pull-right">
+              <li>
+                <form class="navbar-search" action="">
+                  <input type="text" class="search-query" placeholder="Search">
+                </form>
+              </li>
+          </div>
         </div>
       </div>
     </div>
@@ -198,6 +193,31 @@
         </footer>
       </div>
     </div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="../js/tests/vendor/jquery.js"></script>
+    <script src="../js/bootstrap-transition.js"></script>
+    <script src="../js/bootstrap-alert.js"></script>
+    <script src="../js/bootstrap-modal.js"></script>
+    <script src="../js/bootstrap-dropdown.js"></script>
+    <script src="../js/bootstrap-scrollspy.js"></script>
+    <script src="../js/bootstrap-tab.js"></script>
+    <script src="../js/bootstrap-tooltip.js"></script>
+    <script src="../js/bootstrap-popover.js"></script>
+    <script src="../js/bootstrap-button.js"></script>
+    <script src="../js/bootstrap-collapse.js"></script>
+    <script src="../js/bootstrap-carousel.js"></script>
+    <script src="../js/bootstrap-typeahead.js"></script>
+    <script src="application.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#featureCarousel').carousel();
+      });
+    </script>
 
   </body>
 </html>
