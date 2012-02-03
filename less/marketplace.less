@@ -12,18 +12,6 @@ body {
   margin-left: 0px;
 }
 
-.main-feature {
-
-}
-
-.features {
-  
-}
-
-.secondary-features {
-  .features();
-}
-
 .compatibility-list > li {
   margin-left: @gridGutterWidth;
 }
@@ -36,6 +24,17 @@ body {
   p.more {
     .hide();
   }
+}
+
+.collections .thumbnail {
+  .site {
+    color: @green;
+  }
+  .date {
+    font-size: @baseFontSize * 0.75;
+    color: @gray;
+  }
+  .clearfix();
 }
 
 .reviews {
@@ -143,6 +142,19 @@ body {
   }
 }
 
+@media (max-width: 940px) {
+  // Hide the buttons for features in tablet or phone views
+  .collections, .secondary-features {
+    .btn {
+      .hide();
+    }
+  }
+  // hide the apps vs. add-ons choice when we're in tablets or phones
+  .navbar .nav > li.apps-add-ons {
+    .hide();
+  }
+}
+
 // LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
 // --------------------------------------------------
 
@@ -162,9 +174,6 @@ body {
   .secondary-features {
     .hide();
   }
-  #chart_div {
-    .hide();
-  }
 }
 
 // UP TO LANDSCAPE PHONE
@@ -173,11 +182,6 @@ body {
 @media (max-width: 480px) {
   body {
     padding-top: 70px;
-  }
-  .features {
-    .btn {
-      .hide();
-    }
   }
   .app-info-section {
     .btn {

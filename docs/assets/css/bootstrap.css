@@ -3378,6 +3378,23 @@ body {
 .app-description p.more {
   display: none;
 }
+.collections .thumbnail {
+  *zoom: 1;
+}
+.collections .thumbnail .site {
+  color: #46a546;
+}
+.collections .thumbnail .date {
+  font-size: 9.75px;
+  color: #555555;
+}
+.collections .thumbnail:before, .collections .thumbnail:after {
+  display: table;
+  content: "";
+}
+.collections .thumbnail:after {
+  clear: both;
+}
 .reviews .review {
   margin: 10px;
 }
@@ -3392,6 +3409,9 @@ body {
 }
 .reviews .review .review-meta .date {
   color: #999999;
+}
+.subnav .nav-pills .btn-group {
+  margin: 3px 2px 3px 0;
 }
 .categories .category {
   height: 140px;
@@ -3460,6 +3480,14 @@ body {
     float: left;
   }
 }
+@media (max-width: 940px) {
+  .collections .btn, .secondary-features .btn {
+    display: none;
+  }
+  .navbar .nav > li.apps-add-ons {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   body {
     padding-top: 0;
@@ -3473,16 +3501,10 @@ body {
   .main-feature, .secondary-features {
     display: none;
   }
-  #chart_div {
-    display: none;
-  }
 }
 @media (max-width: 480px) {
   body {
     padding-top: 70px;
-  }
-  .features .btn {
-    display: none;
   }
   .app-info-section .btn {
     display: block;
