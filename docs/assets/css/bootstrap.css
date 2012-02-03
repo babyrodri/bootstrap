@@ -3370,10 +3370,14 @@ body {
   margin-left: 0px;
 }
 .compatibility-list > li {
-  margin-left: 20px;
+  display: inline-block;
+  margin-right: 4px;
 }
 .app-icon-section {
   margin-left: 0;
+}
+.app-buttons .btn {
+  margin-bottom: 10px;
 }
 .app-description p.more {
   display: none;
@@ -3409,9 +3413,6 @@ body {
 }
 .reviews .review .review-meta .date {
   color: #999999;
-}
-.subnav .nav-pills .btn-group {
-  margin: 3px 2px 3px 0;
 }
 .categories .category {
   height: 140px;
