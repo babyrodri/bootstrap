@@ -3393,6 +3393,24 @@ body {
 .reviews .review .review-meta .date {
   color: #999999;
 }
+.categories .category {
+  height: 140px;
+  padding: 10px;
+  background-color: #eeeeee;
+  margin-bottom: 20px;
+}
+.categories .category h1 {
+  font-size: 140px;
+  /* we want to fit the h5 in just below this h1 */
+
+  line-height: 122px;
+  text-align: center;
+  color: #999999;
+}
+.categories .category h5 {
+  text-align: center;
+  color: #999999;
+}
 @media (min-width: 940px) {
   .all-reviews .tab-content {
     margin-left: 0px;
@@ -3425,6 +3443,9 @@ body {
 @media (max-width: 768px) {
   body {
     padding-top: 0;
+  }
+  .row.categories > .category {
+    margin-bottom: 20px;
   }
   .all-reviews .tab-content {
     margin-left: 0px;

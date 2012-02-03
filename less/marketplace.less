@@ -58,6 +58,27 @@ body {
   }
 }
 
+.categories {
+  @size : 140px;
+  .category {
+    height: @size;
+    padding: 10px;
+    background-color: @grayLighter;
+    margin-bottom: @gridGutterWidth;
+    h1 {
+      font-size: @size;
+      /* we want to fit the h5 in just below this h1 */
+      line-height: @size - @baseLineHeight;
+      text-align: center;
+      color: @grayLight;
+    }
+    h5 {
+      text-align: center;
+      color: @grayLight;
+    }
+  }
+}
+
 // PORTRAIT TABLET TO DEFAULT DESKTOP
 // ----------------------------------
 
@@ -107,6 +128,9 @@ body {
 @media (max-width: 768px) {
   body {
     padding-top: 0;
+  }
+  .row.categories > .category {
+    margin-bottom: @gridGutterWidth;
   }
   .all-reviews {
     .tab-content {
