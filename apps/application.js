@@ -19,4 +19,16 @@ $(document).ready(function () {
     }
   });
 
+  $(".collections .thumbnail").click(function () {
+    window.location.href = "collection.html";
+  });
+
+  $(".secondary-features .thumbnail").click(function () {
+    window.location.href = "details.html";
+  });
+
+  $(".categories .category").click(function () {
+    window.location.href = "category.html";
+  });
+
 });
