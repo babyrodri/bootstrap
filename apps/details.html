@@ -11,6 +11,8 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
     <!-- Le styles -->
     <link href="../docs/assets/css/bootstrap.css" rel="stylesheet">
     <link href="../docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
@@ -35,6 +37,13 @@
           <a class="brand" href="#">Mozilla Marketplace</a>
           <div class="nav-collapse">
             <ul class="nav pull-right">
+              <li class="dropdown apps-add-ons">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Apps</a>
+                <ul class="dropdown-menu">
+                  <li class="active"><a href="#apps">Apps</a></li>
+                  <li><a href="#add-ons">Firefox Add-ons</a></li>
+                </ul>
+              </li>
               <li>
                 <form class="navbar-search" action="">
                   <input type="text" class="search-query" placeholder="Search">
@@ -52,9 +61,8 @@
         <div class="row">
           <div class="span12">
             <div class="row">
-              <div class="span3">
-                  <img class="app-icon" alt="" src="http://placehold.it/210x150" />
-              </div>
+
+                  <img class="span2 app-icon" alt="" src="http://placehold.it/256x256" />
 
               <div class="span6">
                 <div class="app-info-section">
@@ -68,6 +76,17 @@
                     <li><span class="label">Phones</span></li>
                     <li><span class="label">Tablets</span></li>
                   </ul>
+                  <div class="row">
+                    <div class="app-description span6">
+                      <p>
+                        Horse Pinball helps you find your favorite movies, books, or music albums. As you visit sites like Amazon, IMDB, and Wikipedia, Horses suggest things you'll like.
+                      </p>
+                      <p class="more">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus tincidunt tellus, nec laoreet augue fermentum non. Integer a elit elit. Phasellus venenatis tellus ut diam aliquam tristique. Cras dictum, lectus ac dictum ultricies, nulla nisl consectetur enim, at convallis metus est pellentesque nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed pretium libero. Ut accumsan dictum tellus, eu tempor sem porta at. Cras enim orci, bibendum eget sagittis eget, feugiat eu mauris. 
+                      </p>
+                      <p><a class="btn more pull-right" href="#">Read More &raquo;</a></p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -77,17 +96,6 @@
               </div>
             </div>
 
-            <div class="row">
-              <div class="app-description span6 offset3">
-                <p>
-                  Horse Pinball helps you find your favorite movies, books, or music albums. As you visit sites like Amazon, IMDB, and Wikipedia, Horses suggest things you'll like.
-                </p>
-                <p class="more">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus tincidunt tellus, nec laoreet augue fermentum non. Integer a elit elit. Phasellus venenatis tellus ut diam aliquam tristique. Cras dictum, lectus ac dictum ultricies, nulla nisl consectetur enim, at convallis metus est pellentesque nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed pretium libero. Ut accumsan dictum tellus, eu tempor sem porta at. Cras enim orci, bibendum eget sagittis eget, feugiat eu mauris. 
-                </p>
-                <p><a class="btn more pull-right" href="#">Read More &raquo;</a></p>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -133,46 +141,106 @@
         <div class="page-header">
           <h2>Recommended <small>outside reviews</small></h2>
         </div>
-        <ul class="thumbnails collections">
-          <li class="span4">
-            <div class="thumbnail">
-                <img src="http://placehold.it/360x115" alt="">
-                <p>
-                  <p><a class="btn btn-small pull-right" href="#">View Collection &raquo;</a></p>
-                  <h5>Top Apps of 2011</h5>
-                  <p><span class="site">lifehacker.com</span><br/><span class="date">Feb 1st 2012</span></p>
-                </p>
-            </div>
-          </li>
-          <li class="span4">
-            <div class="thumbnail">
-                <img src="http://placehold.it/360x115" alt="">
-                <p>
-                  <p><a class="btn btn-small pull-right" href="#">View Collection &raquo;</a></p>
-                  <h5>Best Horse Games</h5>
-                  <p><span class="site">time.com</span><br/><span class="date">Feb 2nd 2012</span></p>
-                </p>
-            </div>
-          </li>
-          <li class="span4">
-            <div class="thumbnail">
-                <img src="http://placehold.it/360x115" alt="">
-                <p>
-                  <p><a class="btn btn-small pull-right" href="#">View Collection &raquo;</a></p>
-                  <h5>Pinball Apps</h5>
-                  <p><span class="site">mashable.com</span><br/><span class="date">Feb 1st 2012</span></p>
-                </p>
-            </div>
-          </li>
-        </ul>
+
+        <section class="collections">
+          <ul class="thumbnails">
+            <li class="span4">
+              <div class="thumbnail">
+                <div class="date">Feb 1st 2012</div>
+                <img src="http://placehold.it/360x230" alt="">
+                  <p>
+                    <h5>Top Apps of 2011</h5>
+                    <div class="site">lifehacker.com</div>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id sem id tortor consequat tempor. Suspendisse massa leo, suscipit et feugiat vitae, vestibulum non est. Praesent sit amet varius est. Maecenas eu diam ac risus fermentum posuere non eu dui.</p>
+                    <div class="recommendations row">
+                      <div class="app span1">
+                        <img src="http://placehold.it/48x48" alt="">
+                        <h5>Photr</h5>
+                      </div>
+                      <div class="app span1">
+                        <img src="http://placehold.it/48x48" alt="">
+                        <h5>InstaOunce</h5>
+                      </div>
+                      <div class="app span1">
+                        <img src="http://placehold.it/48x48" alt="">
+                        <h5>Hackz</h5>
+                      </div>
+                      <div class="app span1">
+                        <img src="http://placehold.it/48x48" alt="">
+                        <h5>Forte</h5>
+                      </div>
+                    </div>
+                  </p>
+              </div>
+            </li>
+            <li class="span4">
+              <div class="thumbnail">
+                <div class="date">Feb 1st 2012</div>
+                <img src="http://placehold.it/360x230" alt="">
+                  <p>
+                    <h5>Best Photo Editing Apps</h5>
+                    <div class="site">time.com</div>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id sem id tortor consequat tempor. Suspendisse massa leo, suscipit et feugiat vitae, vestibulum non est. Praesent sit amet varius est. Maecenas eu diam ac risus fermentum posuere non eu dui.</p>
+                    <div class="recommendations row">
+                      <div class="app span1">
+                        <img src="http://placehold.it/48x48" alt="">
+                        <h5>Photr</h5>
+                      </div>
+                      <div class="app span1">
+                        <img src="http://placehold.it/48x48" alt="">
+                        <h5>Imgr</h5>
+                      </div>
+                      <div class="app span1">
+                        <img src="http://placehold.it/48x48" alt="">
+                        <h5>Photoz</h5>
+                      </div>
+                      <div class="app span1">
+                        <img src="http://placehold.it/48x48" alt="">
+                        <h5>Photoz</h5>
+                      </div>
+                    </div>
+                  </p>
+              </div>
+            </li>
+            <li class="span4">
+              <div class="thumbnail">
+                <div class="date">Feb 1st 2012</div>
+                <img src="http://placehold.it/360x230" alt="">
+                  <p>
+                    <h5>Hippest Apps to Date</h5>
+                    <div class="site">mashable.com</div>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id sem id tortor consequat tempor. Suspendisse massa leo, suscipit et feugiat vitae, vestibulum non est. Praesent sit amet varius est. Maecenas eu diam ac risus fermentum posuere non eu dui.</p>
+                    <div class="recommendations row">
+                      <div class="app span1">
+                        <img src="http://placehold.it/48x48" alt="">
+                        <h5>PBR1</h5>
+                      </div>
+                      <div class="app span1">
+                        <img src="http://placehold.it/48x48" alt="">
+                        <h5>TightJeans</h5>
+                      </div>
+                      <div class="app span1">
+                        <img src="http://placehold.it/48x48" alt="">
+                        <h5>Shadz</h5>
+                      </div>
+                      <div class="app span1">
+                        <img src="http://placehold.it/48x48" alt="">
+                        <h5>ATmz</h5>
+                      </div>
+                    </div>
+                  </p>
+              </div>
+            </li>
+          </ul>
+        </section>
 
         <div class="page-header">
           <h2>Reviews <small>by app users</small></h2>
         </div>
 
         <div class="row" style="margin-bottom:40px;">
-          <div class="span12" style="margin-left:0;">
-            <div class="center-block"><img src="http://placehold.it/940x300" alt="" title="Reviews Timeline Chart"></div>
+          <div class="span12">
+            <div class="center-block"><img src="http://placehold.it/640x150" alt="" title="Reviews Timeline Chart"></div>
           </div>
         </div>
 

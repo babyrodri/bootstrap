@@ -8,8 +8,8 @@ body {
   background-color: #fff;
 }
 
-.content > .row {
-  margin-left: 0px;
+.page-header {
+  border-bottom: none;
 }
 
 .compatibility-list > li {
@@ -38,10 +38,30 @@ body {
     color: @green;
   }
   .date {
-    font-size: @baseFontSize * 0.75;
-    color: @gray;
+    font-size: @baseFontSize * 0.85;
+    color: @grayLight;
+    margin: 5px 0;
   }
+  padding: 5px 10px 10px;
+  cursor: pointer;
   .clearfix();
+  @shadow : 0 2px 2px #DDDDDD;
+  .box-shadow(@shadow);
+  .recommendations {
+    margin-left: -10px;
+    .app {
+      text-align: center;
+      margin-left: 10px;
+    }
+  }
+}
+
+.secondary-features {
+  .thumbnail {
+    @shadow : 0 2px 2px #DDDDDD;
+    .box-shadow(@shadow);
+    cursor: pointer;
+  }
 }
 
 .reviews {
@@ -98,11 +118,6 @@ body {
 // ------------------
 
 @media (min-width: 1200px) {
-  .main-feature {
-    .carousel {
-      .center-block();
-    }
-  }
 
 }
 
@@ -141,9 +156,7 @@ body {
     }
   }
   // Show reviews as two columns in Desktop view
-  #negative-reviews {
-    float: right;
-  }
+  #negative-reviews,
   #positive-reviews {
     float: left;
   }
@@ -196,5 +209,9 @@ body {
       margin: 0 auto @gridGutterWidth;
       text-align: center;
     }
+  }
+  .content .row > .app-icon {
+    width: 64px;
+    float: left;
   }
 }
