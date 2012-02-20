@@ -31,4 +31,8 @@ $(document).ready(function () {
     window.location.href = "category.html";
   });
 
+  $("a.brand").click(function () {
+    window.location.href = "index.html";
+  });
+
 });
