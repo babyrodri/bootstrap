@@ -2,6 +2,7 @@ $(document).ready(function () {
 
   $("a.more").click(function () {
     $(this).parents(".app-description").find("p.more").slideToggle();
+    $(this).find("span").toggleClass("icon-chevron-down").toggleClass("icon-chevron-up");
   });
 
   $("#purchase").click(function () {
@@ -14,6 +15,7 @@ $(document).ready(function () {
     } else {
         btn.button("purchasing");
         window.setTimeout(function () {
+          btn.toggleClass("btn-primary").toggleClass("btn-success");
           btn.data("purchased", true).button('purchased');
         }, 3000);
     }
@@ -23,7 +25,7 @@ $(document).ready(function () {
     window.location.href = "collection.html";
   });
 
-  $(".secondary-features .thumbnail").click(function () {
+  $(".features .thumbnail").click(function () {
     window.location.href = "details.html";
   });
 
