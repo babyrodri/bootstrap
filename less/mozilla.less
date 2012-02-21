@@ -1,0 +1,58 @@
+// mozilla.less
+
+body {
+  color:          @mozillaGray;
+}
+
+.large {
+  color:          @mozillaRed;
+  text-shadow:    0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+h1, h2, h3, h4 {
+  line-height:    @largeLineHeight;
+  font-weight:    @largeFontWeight;
+}
+
+// UP TO LANDSCAPE PHONE
+// ---------------------
+
+@media (max-width: 480px) { }
+
+
+// LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
+// --------------------------------------------------
+
+@media (max-width: 768px) { }
+
+
+// PORTRAIT TABLET TO DEFAULT DESKTOP
+// ----------------------------------
+
+@media (min-width: 768px) and (max-width: 980px) {
+  h1 {
+    font-size: @largeFontSize / 2;
+    letter-spacing: @largeFontSpacing / 2;
+    line-height:    @largeLineHeight * 1.5;
+  }
+}
+
+// TABLETS AND BELOW
+// -----------------
+@media (max-width: 980px) { }
+
+
+// DEFAULT DESKTOP
+// ---------------
+
+@media (min-width: 980px) {
+  h1 {
+    font-size: @largeFontSize;
+    letter-spacing: @largeFontSpacing;
+  }
+}
+
+// LARGE DESKTOP & UP
+// ------------------
+
+@media (min-width: 1200px) { }
